@@ -51,12 +51,21 @@ for i = 1:nq
     [qd(i), dqd(i), ddqd(i)] = quintic_trajectory_mex(t, T, q0(i), qf(i));
 end
 
-F = 4;
+F = 1;
 % ---------- OG ----------
 if F==1
-    LP = init_LP_1027_mex;
+    LP = init_LP_1028_mex;
     SV = init_SV_1027_mex;
     [M, C, G] = calculate_dynamics(qr, dqr, LP, SV);
+    
+    disp(M);
+    disp(['rank(M)：', num2str(rank(M))]);
+    disp(['cond(M)：', num2str(cond(M))]);
+    disp(['rcond(M)：', num2str(rcond(M))]);
+    disp(['nnz(M)：', num2str(nnz(M))]);
+    disp(['det(M)：', num2str(det(M))]);
+    disp(['trace(M)：', num2str(trace(M))]);
+
     F = calculate_joint_friction_mex(dqr);
     tau = M * ddqd + C + G + F ;
 
@@ -114,6 +123,8 @@ elseif F==4
     LP = init_LP_1028_mex;
     SV = init_SV_1027_mex;
     [M, C, G] = calculate_dynamics(qr, dqr, LP, SV);
+
+    disp(M);
 
     disp(['rank(M)：', num2str(rank(M))]);
     disp(['cond(M)：', num2str(cond(M))]);
