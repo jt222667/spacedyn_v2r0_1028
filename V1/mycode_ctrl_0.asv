@@ -23,6 +23,8 @@ x0  = [];
 str = [];
 ts  = [0.001 0];
 
+
+
 function sys = mdlOutputs(t,x,u)
 
 % ---------- 读取测量量 ----------
@@ -111,8 +113,9 @@ elseif F==3
 elseif F==4
     % LP = single_init_2_mex;
     % LP = init_LP_1027_mex;
-    LP = init_LP_1028_mex;
+    LP = init_LP_1028();
     SV = init_SV_1027_mex;
+
     [M, C, G] = calculate_dynamics(qr, dqr, LP, SV);
 
     disp(['rank(M)：', num2str(rank(M))]);
