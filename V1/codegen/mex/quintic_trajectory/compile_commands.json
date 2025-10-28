@@ -1,0 +1,56 @@
+[
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\quintic_trajectory",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=quintic_trajectory_mex   quintic_trajectory_data.c /Fobuild\\win64\\quintic_trajectory_data.obj",
+    "file": "quintic_trajectory_data.c",
+    "output": "build/win64/quintic_trajectory_data.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\quintic_trajectory",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=quintic_trajectory_mex   rt_nonfinite.c /Fobuild\\win64\\rt_nonfinite.obj",
+    "file": "rt_nonfinite.c",
+    "output": "build/win64/rt_nonfinite.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\quintic_trajectory",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=quintic_trajectory_mex   quintic_trajectory_initialize.c /Fobuild\\win64\\quintic_trajectory_initialize.obj",
+    "file": "quintic_trajectory_initialize.c",
+    "output": "build/win64/quintic_trajectory_initialize.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\quintic_trajectory",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=quintic_trajectory_mex   quintic_trajectory_terminate.c /Fobuild\\win64\\quintic_trajectory_terminate.obj",
+    "file": "quintic_trajectory_terminate.c",
+    "output": "build/win64/quintic_trajectory_terminate.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\quintic_trajectory",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=quintic_trajectory_mex   quintic_trajectory.c /Fobuild\\win64\\quintic_trajectory.obj",
+    "file": "quintic_trajectory.c",
+    "output": "build/win64/quintic_trajectory.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\quintic_trajectory",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=quintic_trajectory_mex   interface\\_coder_quintic_trajectory_api.c /Fobuild\\win64\\_coder_quintic_trajectory_api.obj",
+    "file": "interface/_coder_quintic_trajectory_api.c",
+    "output": "build/win64/_coder_quintic_trajectory_api.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\quintic_trajectory",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=quintic_trajectory_mex   interface\\_coder_quintic_trajectory_mex.c /Fobuild\\win64\\_coder_quintic_trajectory_mex.obj",
+    "file": "interface/_coder_quintic_trajectory_mex.c",
+    "output": "build/win64/_coder_quintic_trajectory_mex.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\quintic_trajectory",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=quintic_trajectory_mex   interface\\_coder_quintic_trajectory_info.c /Fobuild\\win64\\_coder_quintic_trajectory_info.obj",
+    "file": "interface/_coder_quintic_trajectory_info.c",
+    "output": "build/win64/_coder_quintic_trajectory_info.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\quintic_trajectory",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=quintic_trajectory_mex   D:\\Software\\MATLAB\\R2022b\\extern\\version\\c_mexapi_version.c /Fobuild\\win64\\c_mexapi_version.obj",
+    "file": "D:/Software/MATLAB/R2022b/extern/version/c_mexapi_version.c",
+    "output": "build/win64/c_mexapi_version.obj"
+  }
+]

@@ -1,0 +1,52 @@
+# CompilerName=msvc150
+# Mode=optim
+ninja_required_version = 1.3
+
+# Basic folders
+root = .
+builddir = $root\build\win64
+matlabdir = D:\Software\MATLAB\R2022b
+startdir = C:\Users\J\Desktop\SpaceDyn-2.0\src\matlab\spacedyn_v2r0_1027
+
+# Toolchain information
+cc = cl
+cxx = cl
+linker = link
+linkerxx = link
+
+cflags =  /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I "$root" /I "$startdir" /I "$root\interface" /I "$matlabdir\extern\include" /I "." -DMODEL=calc_pos_mex  
+
+cxxflags =   /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I "$root" /I "$startdir" /I "$root\interface" /I "$matlabdir\extern\include" /I "." -DMODEL=calc_pos_mex  
+
+ldflags =  /nologo /manifest   /DLL /LIBPATH:"$matlabdir\extern\lib\win64\microsoft" libmx.lib libmex.lib libmat.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib  /out:"calc_pos_mex.mexw64" libemlrt.lib libcovrt.lib libut.lib libmwmathutil.lib  /export:mexFunction /export:mexfilerequiredapiversion /export:emlrtMexFcnProperties /export:calc_pos /export:calc_pos_initialize /export:calc_pos_terminate /export:calc_pos_atexit
+
+linkobjs = 
+
+# Build Rules
+rule cc
+    command = $cc $cflags $in /Fo$out
+
+rule cxx
+    command = $cxx $cxxflags $in /Fo$out
+
+rule link
+    command = $linker @$out.rsp $linkobjs $ldflags
+    rspfile = $out.rsp
+    rspfile_content = $in
+
+rule linkxx
+    command = $linkerxx $in $linkobjs $ldflags
+
+# Build
+build $builddir\calc_pos_data.obj : cc $root\calc_pos_data.c
+build $builddir\rt_nonfinite.obj : cc $root\rt_nonfinite.c
+build $builddir\calc_pos_initialize.obj : cc $root\calc_pos_initialize.c
+build $builddir\calc_pos_terminate.obj : cc $root\calc_pos_terminate.c
+build $builddir\_coder_calc_pos_api.obj : cc $root\interface\_coder_calc_pos_api.c
+build $builddir\_coder_calc_pos_mex.obj : cc $root\interface\_coder_calc_pos_mex.c
+build $builddir\calc_pos.obj : cc $root\calc_pos.c
+build $builddir\_coder_calc_pos_info.obj : cc $root\interface\_coder_calc_pos_info.c
+build $builddir\c_mexapi_version.obj : cc $matlabdir\extern\version\c_mexapi_version.c
+
+# Link
+build $root\calc_pos_mex.mexw64 : link $builddir\calc_pos_data.obj $builddir\rt_nonfinite.obj $builddir\calc_pos_initialize.obj $builddir\calc_pos_terminate.obj $builddir\_coder_calc_pos_api.obj $builddir\_coder_calc_pos_mex.obj $builddir\calc_pos.obj $builddir\_coder_calc_pos_info.obj $builddir\c_mexapi_version.obj 

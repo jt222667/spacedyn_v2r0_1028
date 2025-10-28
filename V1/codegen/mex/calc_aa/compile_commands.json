@@ -1,0 +1,56 @@
+[
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_aa",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_aa_mex   calc_aa_data.c /Fobuild\\win64\\calc_aa_data.obj",
+    "file": "calc_aa_data.c",
+    "output": "build/win64/calc_aa_data.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_aa",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_aa_mex   rt_nonfinite.c /Fobuild\\win64\\rt_nonfinite.obj",
+    "file": "rt_nonfinite.c",
+    "output": "build/win64/rt_nonfinite.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_aa",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_aa_mex   calc_aa_initialize.c /Fobuild\\win64\\calc_aa_initialize.obj",
+    "file": "calc_aa_initialize.c",
+    "output": "build/win64/calc_aa_initialize.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_aa",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_aa_mex   calc_aa_terminate.c /Fobuild\\win64\\calc_aa_terminate.obj",
+    "file": "calc_aa_terminate.c",
+    "output": "build/win64/calc_aa_terminate.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_aa",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_aa_mex   interface\\_coder_calc_aa_api.c /Fobuild\\win64\\_coder_calc_aa_api.obj",
+    "file": "interface/_coder_calc_aa_api.c",
+    "output": "build/win64/_coder_calc_aa_api.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_aa",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_aa_mex   interface\\_coder_calc_aa_mex.c /Fobuild\\win64\\_coder_calc_aa_mex.obj",
+    "file": "interface/_coder_calc_aa_mex.c",
+    "output": "build/win64/_coder_calc_aa_mex.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_aa",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_aa_mex   calc_aa.c /Fobuild\\win64\\calc_aa.obj",
+    "file": "calc_aa.c",
+    "output": "build/win64/calc_aa.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_aa",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_aa_mex   interface\\_coder_calc_aa_info.c /Fobuild\\win64\\_coder_calc_aa_info.obj",
+    "file": "interface/_coder_calc_aa_info.c",
+    "output": "build/win64/_coder_calc_aa_info.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_aa",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_aa_mex   D:\\Software\\MATLAB\\R2022b\\extern\\version\\c_mexapi_version.c /Fobuild\\win64\\c_mexapi_version.obj",
+    "file": "D:/Software/MATLAB/R2022b/extern/version/c_mexapi_version.c",
+    "output": "build/win64/c_mexapi_version.obj"
+  }
+]

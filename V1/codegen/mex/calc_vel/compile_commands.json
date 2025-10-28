@@ -1,0 +1,56 @@
+[
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_vel",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_vel_mex   calc_vel_data.c /Fobuild\\win64\\calc_vel_data.obj",
+    "file": "calc_vel_data.c",
+    "output": "build/win64/calc_vel_data.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_vel",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_vel_mex   rt_nonfinite.c /Fobuild\\win64\\rt_nonfinite.obj",
+    "file": "rt_nonfinite.c",
+    "output": "build/win64/rt_nonfinite.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_vel",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_vel_mex   calc_vel_initialize.c /Fobuild\\win64\\calc_vel_initialize.obj",
+    "file": "calc_vel_initialize.c",
+    "output": "build/win64/calc_vel_initialize.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_vel",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_vel_mex   calc_vel_terminate.c /Fobuild\\win64\\calc_vel_terminate.obj",
+    "file": "calc_vel_terminate.c",
+    "output": "build/win64/calc_vel_terminate.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_vel",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_vel_mex   interface\\_coder_calc_vel_api.c /Fobuild\\win64\\_coder_calc_vel_api.obj",
+    "file": "interface/_coder_calc_vel_api.c",
+    "output": "build/win64/_coder_calc_vel_api.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_vel",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_vel_mex   interface\\_coder_calc_vel_mex.c /Fobuild\\win64\\_coder_calc_vel_mex.obj",
+    "file": "interface/_coder_calc_vel_mex.c",
+    "output": "build/win64/_coder_calc_vel_mex.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_vel",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_vel_mex   calc_vel.c /Fobuild\\win64\\calc_vel.obj",
+    "file": "calc_vel.c",
+    "output": "build/win64/calc_vel.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_vel",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_vel_mex   interface\\_coder_calc_vel_info.c /Fobuild\\win64\\_coder_calc_vel_info.obj",
+    "file": "interface/_coder_calc_vel_info.c",
+    "output": "build/win64/_coder_calc_vel_info.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\\codegen\\mex\\calc_vel",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1027\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=calc_vel_mex   D:\\Software\\MATLAB\\R2022b\\extern\\version\\c_mexapi_version.c /Fobuild\\win64\\c_mexapi_version.obj",
+    "file": "D:/Software/MATLAB/R2022b/extern/version/c_mexapi_version.c",
+    "output": "build/win64/c_mexapi_version.obj"
+  }
+]
