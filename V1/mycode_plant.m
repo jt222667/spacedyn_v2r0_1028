@@ -35,10 +35,10 @@ SV = init_SV_1027_mex;
 [M, C, G] = calculate_dynamics(qr, dqr, LP, SV);
 F = calculate_joint_friction_mex(dqr);
 
-    M=0.001*M;
-    C=0.001*C;
-    G=0.001*G;
-F = 1.001 * F;
+M=1*M;
+C=1*C;
+G=1*G;
+F = 1.3 * F;
 
 qdd = M \ (tau - C - G  - F );
 

@@ -115,9 +115,9 @@ elseif F==4
     LP = single_init_2_mex;
     SV = init_SV_1027_mex;
     [M, C, G] = calculate_dynamics(qr, dqr, LP, SV);
-    M=0.001*M;
-    C=0.001*C;
-    G=0.001*G;
+    M=1*M;
+    C=1*C;
+    G=1*G;
     F = calculate_joint_friction_mex(dqr);
     disp(M)
     % ---------- 误差 ----------
