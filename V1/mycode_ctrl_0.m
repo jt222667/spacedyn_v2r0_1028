@@ -164,7 +164,24 @@ elseif F==5
     %     tau_dist(3) = 5;
     % end
     tau = M * ddqd + C + G + F + tau_dist ;
-
+elseif F==6
+    % dq = dq + 0.01*randn(size(dq));
+    % ---------- 误差 ----------
+    e  = qr - qd;
+    de = dqr - dqd;
+    % ---------- 控制增益 ----------
+    Kp = diag(100*ones(size(qr)));
+    Kd = diag(20*ones(size(qr)));
+    % ---------- 动力学计算 ----------
+    [LP, SV] = INIT_mex;
+    [M, C, G] = calculate_dynamics(qr, dqr, LP, SV);
+    F = calculate_joint_friction_mex(dqr);
+    ddqd = -Kp * e - Kd * de;
+    tau_dist = zeros(21,1);
+    % if t > 2.5 && t < 2.55
+    %     tau_dist(3) = 5;
+    % end
+    tau = M * ddqd + C + G + F + tau_dist ;
 end
 
 
