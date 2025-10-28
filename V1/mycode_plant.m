@@ -30,15 +30,18 @@ dqr  = u(43:63);
 
 % LP = single_init_2_mex;
 % LP = init_LP_1027_mex;
-LP = init_LP_1028();
+LP = init_LP_1028_mex;
 SV = init_SV_1027_mex;
 
 [M, C, G] = calculate_dynamics(qr, dqr, LP, SV);
 
-
 F = calculate_joint_friction_mex(dqr);
 
-% F = 1.3 * F;
+M = 1.3 * M;
+C = 1.3 * C;
+G = 1.3 * G;
+
+% F = 1.01 * F;
 
 qdd = M \ (tau - C - G  - F );
 

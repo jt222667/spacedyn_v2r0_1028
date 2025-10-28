@@ -32,7 +32,7 @@ qr  = u(1:21);      % 实际关节角度
 dqr = u(22:42);     % 实际关节角速度
 
 % ---------- 轨迹生成初始化 ----------
-T  = 5;   % 轨迹时长（s）
+T  = 10;   % 轨迹时长（s）
 nq = 21;  % 关节数
 q0 = zeros(nq,1);
 qf = zeros(nq,1);
@@ -48,7 +48,6 @@ qf(4) = 0.5*pi;
 qf(5) = 0.5*pi;
 qf(6) = 0.5*pi;
 qf(7) = 0.5*pi;
-
 
 for i = 1:nq
     [qd(i), dqd(i), ddqd(i)] = quintic_trajectory_mex(t, T, q0(i), qf(i));
@@ -112,11 +111,10 @@ elseif F==3
 
     % ---------- NFTSMC ----------
 elseif F==4
-    %     LP = single_init_2_mex;
-    %     LP = init_LP_1027_mex;
-    LP = init_LP_1028();
+    % LP = single_init_2_mex;
+    % LP = init_LP_1027_mex;
+    LP = init_LP_1028_mex;
     SV = init_SV_1027_mex;
-
     [M, C, G] = calculate_dynamics(qr, dqr, LP, SV);
 
     disp(['rank(M)：', num2str(rank(M))]);
@@ -174,7 +172,6 @@ elseif F==5
     tau = M * ddqd + C + G + F + tau_dist ;
 
 end
-
 
 sys = zeros(84,1);
 sys(1:21)  = tau;
