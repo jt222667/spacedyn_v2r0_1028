@@ -112,13 +112,19 @@ elseif F==3
 
     % ---------- NFTSMC ----------
 elseif F==4
-    LP = init_LP_1027_mex;
+    %     LP = single_init_2_mex;
+    %     LP = init_LP_1027_mex;
+    LP = init_LP_1028();
     SV = init_SV_1027_mex;
 
     [M, C, G] = calculate_dynamics(qr, dqr, LP, SV);
 
-    M=10000*M;
-    disp(M);
+    disp(['rank(M)：', num2str(rank(M))]);
+    disp(['cond(M)：', num2str(cond(M))]);
+    disp(['rcond(M)：', num2str(rcond(M))]);
+    disp(['nnz(M)：', num2str(nnz(M))]);
+    disp(['det(M)：', num2str(det(M))]);
+    disp(['trace(M)：', num2str(trace(M))]);
 
     F = calculate_joint_friction_mex(dqr);
 
