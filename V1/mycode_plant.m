@@ -22,7 +22,6 @@ x0  = [];
 str = [];
 ts  = [0 0];
 
-
 function sys=mdlOutputs(t,x,u)
 
 tau  = u(1:21);
@@ -35,9 +34,6 @@ SV = init_SV_1027_mex;
 [M, C, G] = calculate_dynamics(qr, dqr, LP, SV);
 F = calculate_joint_friction_mex(dqr);
 
-M=1*M;
-C=1*C;
-G=1*G;
 F = 1.3 * F;
 
 qdd = M \ (tau - C - G  - F );
