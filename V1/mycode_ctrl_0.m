@@ -112,14 +112,16 @@ elseif F==3
 
     % ---------- NFTSMC ----------
 elseif F==4
-    LP = single_init_2_mex;
+    LP = init_LP_1027_mex;
     SV = init_SV_1027_mex;
+
     [M, C, G] = calculate_dynamics(qr, dqr, LP, SV);
-    M=1*M;
-    C=1*C;
-    G=1*G;
+
+    M=10000*M;
+    disp(M);
+
     F = calculate_joint_friction_mex(dqr);
-    disp(M)
+
     % ---------- 误差 ----------
     e  = qr - qd;
     de = dqr - dqd;
