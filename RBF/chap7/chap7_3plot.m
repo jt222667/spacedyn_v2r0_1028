@@ -1,0 +1,44 @@
+close all;
+
+figure(1);
+subplot(211);
+plot(t,x(:,1),'r',t,x(:,7),'k:','linewidth',2);
+xlabel('time(s)');ylabel('Position tracking');
+legend('Ideal position for link 1','Position tracking for link 1');
+subplot(212);
+plot(t,x(:,4),'r',t,x(:,9),'k:','linewidth',2);
+xlabel('time(s)');ylabel('Position tracking');
+legend('Ideal position for link 2','Position tracking for link 2');
+figure(2);
+subplot(211);
+plot(t,x(:,2),'r',t,x(:,8),'k:','linewidth',2);
+xlabel('time(s)');ylabel('Speed tracking');
+legend('Ideal speed for link 1','Speed tracking of link 1');
+subplot(212);
+plot(t,x(:,5),'r',t,x(:,10),'k:','linewidth',2);
+xlabel('time(s)');ylabel('Speed tracking');
+legend('Ideal speed for link 2','Speed signal tracking of link2');
+
+figure(3);
+subplot(211);
+plot(t,tol1(:,1),'k','linewidth',2);
+xlabel('time(s)');ylabel('Contro input');
+legend('Contro input of link 1');
+subplot(212);
+plot(t,tol2(:,1),'k','linewidth',2);
+xlabel('time(s)');ylabel('Contro input');
+legend('Contro input of link 2');
+
+figure(4);
+subplot(311);
+plot(t,P(:,1),'r',t,P(:,4),'k:','linewidth',2);
+xlabel('time(s)');ylabel('G and GSNN');
+legend('Ideal nrom of G','Estimated norm of G');
+subplot(312);
+plot(t,P(:,2),'r',t,P(:,5),'k:','linewidth',2);
+xlabel('time(s)');ylabel('M and MSNN');
+legend('Ideal norm of M','Estimated norm of M');
+subplot(313);
+plot(t,P(:,3),'r',t,P(:,6),'k:','linewidth',2);
+xlabel('time(s)');ylabel('C and CDNN');
+legend('Ideal norm of C','Estimated norm of C');
