@@ -30,7 +30,7 @@ qr  = u(1:21);      % 实际关节角度
 dqr = u(22:42);     % 实际关节角速度
 
 % ---------- 轨迹生成初始化 ----------
-T  = 10;   % 轨迹时长（s）
+T  = 1;   % 轨迹时长（s）
 nq = 21;  % 关节数
 q0 = zeros(nq,1);
 qf = zeros(nq,1);
@@ -51,13 +51,13 @@ for i = 1:nq
     [qd(i), dqd(i), ddqd(i)] = quintic_trajectory_mex(t, T, q0(i), qf(i));
 end
 
-F = 1;
+F = 4;
 % ---------- OG ----------
 if F==1
     LP = init_LP_1028_mex;
     SV = init_SV_1027_mex;
     [M, C, G] = calculate_dynamics(qr, dqr, LP, SV);
-    
+
     disp(M);
     disp(['rank(M)：', num2str(rank(M))]);
     disp(['cond(M)：', num2str(cond(M))]);
@@ -124,17 +124,15 @@ elseif F==4
     SV = init_SV_1027_mex;
     [M, C, G] = calculate_dynamics(qr, dqr, LP, SV);
 
-    disp(M);
+    %     disp(G);
+    %     disp(['rank(M)：', num2str(rank(M))]);
+    %     disp(['cond(M)：', num2str(cond(M))]);
+    %     disp(['rcond(M)：', num2str(rcond(M))]);
+    %     disp(['nnz(M)：', num2str(nnz(M))]);
+    %     disp(['det(M)：', num2str(det(M))]);
+    %     disp(['trace(M)：', num2str(trace(M))]);
 
-    disp(['rank(M)：', num2str(rank(M))]);
-    disp(['cond(M)：', num2str(cond(M))]);
-    disp(['rcond(M)：', num2str(rcond(M))]);
-    disp(['nnz(M)：', num2str(nnz(M))]);
-    disp(['det(M)：', num2str(det(M))]);
-    disp(['trace(M)：', num2str(trace(M))]);
-
-    F = calculate_joint_friction_mex(dqr);
-
+    F = calculate_joint_friction_mex(dqr);  
     % ---------- 误差 ----------
     e  = qr - qd;
     de = dqr - dqd;
@@ -159,7 +157,6 @@ elseif F==4
     %     tau_dist(3) = 5;
     % end
     tau = M * ( B \ (ds - A) + ddqd ) + C + G + tau_dist + F  ;
-
     % ---------- PD ----------
 elseif F==5
     % dq = dq + 0.01*randn(size(dq));

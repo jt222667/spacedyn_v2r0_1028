@@ -9,7 +9,6 @@ SV = calc_pos_mex(LP, SV);
 Force = r_ne_mex(LP, SV);
 G = Force(7:27);
 
-
 % ---------- 计算 M ----------
 M = zeros(21);
 for k = 1:21
@@ -24,8 +23,6 @@ for k = 1:21
     tau_k = Force_k(7:27);
     M(:, k) = tau_k - G;
 end
-
-
 
 % ---------- 计算 C ----------
 SV.q = q;

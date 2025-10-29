@@ -6,7 +6,7 @@ ninja_required_version = 1.3
 root = .
 builddir = $root\build\win64
 matlabdir = D:\Software\MATLAB\R2022b
-startdir = C:\Users\J\Desktop\SpaceDyn-2.0\src\matlab\spacedyn_v2r0_1027
+startdir = C:\Users\J\Desktop\SpaceDyn-2.0\src\matlab\spacedyn_v2r0_1028\V1
 
 # Toolchain information
 cc = cl

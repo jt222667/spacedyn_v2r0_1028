@@ -26,8 +26,8 @@ static emlrtBCInfo emlrtBCI = {
     "I",            /* aName */
     "init_LP_1027", /* fName */
     "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_"
-    "1027\\init_LP_1027.m", /* pName */
-    0                       /* checkKind */
+    "1028\\V1\\init_LP_1027.m", /* pName */
+    0                           /* checkKind */
 };
 
 /* Function Definitions */
@@ -215,14 +215,14 @@ void init_LP_1027(const emlrtStack *sp, struct0_T *LP)
   memset(&LP->c0[0], 0, 63U * sizeof(real_T));
   memset(&LP->ce[0], 0, 63U * sizeof(real_T));
   LP->c0[0] = 0.0;
-  LP->c0[21] = -21.650635094610969;
-  LP->c0[42] = 21.650635094610962;
+  LP->c0[21] = -0.21650635094610968;
+  LP->c0[42] = 0.21650635094610962;
   LP->c0[1] = 0.0;
   LP->c0[22] = 0.0;
   LP->c0[43] = 0.0;
   LP->c0[2] = 0.25;
-  LP->c0[23] = -12.499999999999995;
-  LP->c0[44] = -12.500000000000011;
+  LP->c0[23] = -0.12499999999999994;
+  LP->c0[44] = -0.12500000000000011;
   for (k = 0; k < 7; k++) {
     real_T d;
     real_T d1;

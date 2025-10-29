@@ -16,8 +16,8 @@ SV.qd = zeros(21,1); % 关节角速度
 SV.qdd = zeros(21,1); % 关节角加速度
 
 SV.vv = zeros(3,21); % 连杆质心线速度
-SV.ww = zeros(3,21); % 连杆质心线加速度
-SV.vd = zeros(3,21); % 连杆质心角速度
+SV.ww = zeros(3,21); % 连杆质心角速度
+SV.vd = zeros(3,21); % 连杆质心线加速度
 SV.wd = zeros(3,21); % 连杆质心角加速度
 
 SV.F0 = [ 0 0 0 ]'; % 作用在基座质心的力

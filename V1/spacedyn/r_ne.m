@@ -144,7 +144,7 @@ end
 % Single body
 
 if LP.num_q == 0
-    SV.tau = zeros(7,1);
+    SV.tau = zeros(21,1);
 
 else
     % Multi body system

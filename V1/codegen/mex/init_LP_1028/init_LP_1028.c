@@ -21,7 +21,7 @@
 static emlrtBCInfo emlrtBCI = {
     1,              /* iFirst */
     7,              /* iLast */
-    31,             /* lineNo */
+    36,             /* lineNo */
     20,             /* colNo */
     "In2",          /* aName */
     "init_LP_1028", /* fName */
@@ -113,10 +113,10 @@ void init_LP_1028(const emlrtStack *sp, struct0_T *LP)
                                 0.0,    -0.0002, 0.0,     0.0016};
   static const real_T dv3[9] = {0.0007, 0.0, 0.0, 0.0,   0.0007,
                                 0.0,    0.0, 0.0, 0.0008};
-  static const real_T dv4[9] = {0.0347, 0.0, 0.0, 0.0,   0.0519,
-                                0.0,    0.0, 0.0, 0.0347};
-  static const real_T dv5[9] = {0.0007, 0.0,     -0.0002, 0.0,   0.0007,
+  static const real_T dv4[9] = {0.0007, 0.0,     -0.0002, 0.0,   0.0007,
                                 0.0,    -0.0002, 0.0,     0.0005};
+  static const real_T dv5[9] = {0.0347, 0.0, 0.0, 0.0,   0.0519,
+                                0.0,    0.0, 0.0, 0.0347};
   static const real_T dv6[9] = {0.0018, 0.0,     -0.0002, 0.0,   0.0016,
                                 0.0,    -0.0002, 0.0,     0.0018};
   static const real_T dv7[9] = {0.0012, 0.0, 0.0, 0.0,   0.0013,
@@ -162,15 +162,22 @@ void init_LP_1028(const emlrtStack *sp, struct0_T *LP)
   LP->m0 = 5.7514;
   memcpy(&LP->m[0], &dv[0], 21U * sizeof(real_T));
   LP->mass = 20.8267;
+  /*  矩阵的条件数唯一决定线性方程解受观测值噪声的影响程度 */
+  /*  条件数越大影响越严重，表现为解与观测值的变化率偏离越大，包括变化率过大或过小
+   */
+  /*  且其对稳定性的衡量不受整体尺度放缩影响，因噪声影响程度由变化率而非绝对大小决定
+   */
+  /*  计算方式：cond(A) = 最大奇异值 / 最小奇异值 */
   for (j = 0; j < 9; j++) {
     In2[j] = dv1[j];
     In2[j + 9] = dv2[j];
     In2[j + 18] = dv3[j];
-    In2[j + 27] = dv5[j];
+    In2[j + 27] = dv4[j];
     In2[j + 36] = dv6[j];
     In2[j + 45] = dv7[j];
     In2[j + 54] = dv8[j];
   }
+  /*  In2 = 100 * In2; */
   memset(&LP->inertia[0], 0, 189U * sizeof(real_T));
   for (k = 0; k < 21; k++) {
     if (k == 0) {
@@ -194,7 +201,7 @@ void init_LP_1028(const emlrtStack *sp, struct0_T *LP)
       emlrtBreakCheckR2012b((emlrtConstCTX)sp);
     }
   }
-  memcpy(&LP->inertia0[0], &dv4[0], 9U * sizeof(real_T));
+  memcpy(&LP->inertia0[0], &dv5[0], 9U * sizeof(real_T));
   /*  */
   for (i = 0; i < 21; i++) {
     LP->J_type[i] = 'R';

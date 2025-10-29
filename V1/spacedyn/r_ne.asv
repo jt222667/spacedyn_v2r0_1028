@@ -22,21 +22,20 @@
 
 function Force = r_ne( LP,SV )
 
-
 Ez = [0; 0; 1];       % 初始化 Ez
 Gravity = [0; 0; 0];  % 初始化 Gravity
-
 
 % Calculation of coordinate transfromation matrices
 A_I_0 = SV.A0;
 
-% Calculation of vel_mexocity vectors vv,ww
+% Calculation of velocity vectors vv,ww
 % NOTE:	vv,ww are in the Inertial frame
 
 SV = calc_vel( LP,SV );
 
-% Calculation of acc_mexeletion vectors vd,wd
+% Calculation of acceletion vectors vd,wd
 % NOTE:	vd,wd are in the Inertial frame
+
 SV = calc_acc( LP,SV );
 
 
@@ -51,23 +50,18 @@ TT0 = (A_I_0*LP.inertia0*A_I_0')*SV.wd0 ...
 % from link 1 to n
 % Single or multi body ?
 
-if LP.num_q == 0
-    % If a Single body,
-    FF = [];
-    TT = [];
 
-    % If a Multi body system,
-else
-    FF = zeros(3,LP.num_q);
-    TT = zeros(3,LP.num_q);
-    for i = 1 : LP.num_q
-        A_I_i  = SV.AA(:,i*3-2:i*3);
-        in_i = LP.inertia(:,i*3-2:i*3);
-        FF(:,i) = LP.m(i) * (SV.vd(:,i)-Gravity) ;
-        TT(:,i) = (A_I_i*in_i*A_I_i')*SV.wd(:,i) ...
-            + cross( SV.ww(:,i) , ((A_I_i*in_i*A_I_i')*SV.ww(:,i)) );
-    end
+% If a Multi body system,
 
+FF = zeros(3,LP.num_q);
+TT = zeros(3,LP.num_q);
+
+for i = 1 : LP.num_q
+    A_I_i  = SV.AA(:,i*3-2:i*3);
+    in_i = LP.inertia(:,i*3-2:i*3);
+    FF(:,i) = LP.m(i) * (SV.vd(:,i)-Gravity) ;
+    TT(:,i) = (A_I_i*in_i*A_I_i')*SV.wd(:,i) ...
+        + cross( SV.ww(:,i) , ((A_I_i*in_i*A_I_i')*SV.ww(:,i)) );
 end
 
 
@@ -103,17 +97,11 @@ if (LP.num_q ~= 0)
 
         end
 
-%         if LP.J_type(i) == 'R'
-%             % Rotational joint
-            Tj(:,i) = TT(:,i) + T ...
-                - cross( A_I_i*LP.cc(:,i,i),FF(:,i) ) ;
+        A_I_i = SV.AA(:,i*3-2:i*3);
 
-%         else
-%             % Prismatic joint
-%             Tj(:,i) = TT(:,i) + T ...
-%                 + cross( A_I_i*(Ez*SV.q(i))-A_I_i*LP.cc(:,i,i) , FF(:,i) );
-% 
-%         end
+        % Rotational joint
+        Tj(:,i) = TT(:,i) + T ...
+            - cross( A_I_i*LP.cc(:,i,i),FF(:,i) ) ;
 
         Tj(:,i) = Tj(:,i) ...
             + LP.SE(i)*( cross(A_I_i*(LP.ce(:,i)-LP.cc(:,i,i)+(LP.J_type(i)=='P')*Ez*SV.q(i)),SV.Fe(:,i) ) + SV.Te(:,i) );
@@ -156,7 +144,7 @@ end
 % Single body
 
 if LP.num_q == 0
-    SV.tau = zeros(21,1);
+    SV.tau = zeros(7,1);
 
 else
     % Multi body system
@@ -195,4 +183,3 @@ else
 end
 
 %%%EOF
-

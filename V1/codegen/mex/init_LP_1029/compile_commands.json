@@ -1,0 +1,56 @@
+[
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\\codegen\\mex\\init_LP_1029",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=init_LP_1029_mex   init_LP_1029_data.c /Fobuild\\win64\\init_LP_1029_data.obj",
+    "file": "init_LP_1029_data.c",
+    "output": "build/win64/init_LP_1029_data.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\\codegen\\mex\\init_LP_1029",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=init_LP_1029_mex   rt_nonfinite.c /Fobuild\\win64\\rt_nonfinite.obj",
+    "file": "rt_nonfinite.c",
+    "output": "build/win64/rt_nonfinite.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\\codegen\\mex\\init_LP_1029",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=init_LP_1029_mex   init_LP_1029_initialize.c /Fobuild\\win64\\init_LP_1029_initialize.obj",
+    "file": "init_LP_1029_initialize.c",
+    "output": "build/win64/init_LP_1029_initialize.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\\codegen\\mex\\init_LP_1029",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=init_LP_1029_mex   init_LP_1029_terminate.c /Fobuild\\win64\\init_LP_1029_terminate.obj",
+    "file": "init_LP_1029_terminate.c",
+    "output": "build/win64/init_LP_1029_terminate.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\\codegen\\mex\\init_LP_1029",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=init_LP_1029_mex   init_LP_1029.c /Fobuild\\win64\\init_LP_1029.obj",
+    "file": "init_LP_1029.c",
+    "output": "build/win64/init_LP_1029.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\\codegen\\mex\\init_LP_1029",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=init_LP_1029_mex   interface\\_coder_init_LP_1029_api.c /Fobuild\\win64\\_coder_init_LP_1029_api.obj",
+    "file": "interface/_coder_init_LP_1029_api.c",
+    "output": "build/win64/_coder_init_LP_1029_api.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\\codegen\\mex\\init_LP_1029",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=init_LP_1029_mex   interface\\_coder_init_LP_1029_mex.c /Fobuild\\win64\\_coder_init_LP_1029_mex.obj",
+    "file": "interface/_coder_init_LP_1029_mex.c",
+    "output": "build/win64/_coder_init_LP_1029_mex.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\\codegen\\mex\\init_LP_1029",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=init_LP_1029_mex   interface\\_coder_init_LP_1029_info.c /Fobuild\\win64\\_coder_init_LP_1029_info.obj",
+    "file": "interface/_coder_init_LP_1029_info.c",
+    "output": "build/win64/_coder_init_LP_1029_info.obj"
+  },
+  {
+    "directory": "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\\codegen\\mex\\init_LP_1029",
+    "command": "cl /c /Zp8 /GR /W3 /EHs /nologo /MD /D_CRT_SECURE_NO_DEPRECATE /D_SCL_SECURE_NO_DEPRECATE /D_SECURE_SCL=0   /DMATLAB_MEX_FILE  /DMATLAB_MEX_FILE /O2 /Oy- /DNDEBUG /fp:strict /utf-8 /I \".\" /I \"C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_1028\\V1\" /I \".\\interface\" /I \"D:\\Software\\MATLAB\\R2022b\\extern\\include\" /I \".\" -DMODEL=init_LP_1029_mex   D:\\Software\\MATLAB\\R2022b\\extern\\version\\c_mexapi_version.c /Fobuild\\win64\\c_mexapi_version.obj",
+    "file": "D:/Software/MATLAB/R2022b/extern/version/c_mexapi_version.c",
+    "output": "build/win64/c_mexapi_version.obj"
+  }
+]
