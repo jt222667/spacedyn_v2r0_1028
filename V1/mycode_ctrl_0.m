@@ -30,7 +30,7 @@ qr  = u(1:21);      % 实际关节角度
 dqr = u(22:42);     % 实际关节角速度
 
 % ---------- 轨迹生成初始化 ----------
-T  = 1;   % 轨迹时长（s）
+T  = 3;   % 轨迹时长（s）
 nq = 21;  % 关节数
 q0 = zeros(nq,1);
 qf = zeros(nq,1);
@@ -51,7 +51,7 @@ for i = 1:nq
     [qd(i), dqd(i), ddqd(i)] = quintic_trajectory_mex(t, T, q0(i), qf(i));
 end
 
-F = 4;
+F = 1;
 % ---------- OG ----------
 if F==1
     LP = init_LP_1028_mex;
@@ -132,7 +132,7 @@ elseif F==4
     %     disp(['det(M)：', num2str(det(M))]);
     %     disp(['trace(M)：', num2str(trace(M))]);
 
-    F = calculate_joint_friction_mex(dqr);  
+    F = calculate_joint_friction_mex(dqr);
     % ---------- 误差 ----------
     e  = qr - qd;
     de = dqr - dqd;
@@ -167,15 +167,29 @@ elseif F==5
     Kp = diag(100*ones(size(qr)));
     Kd = diag(20*ones(size(qr)));
     % ---------- 动力学计算 ----------
-    [LP, SV] = INIT_mex;
+    LP = init_LP_1028_mex;
+    SV = init_SV_1027_mex;
     [M, C, G] = calculate_dynamics(qr, dqr, LP, SV);
     F = calculate_joint_friction_mex(dqr);
     ddqd = -Kp * e - Kd * de;
-    tau_dist = zeros(21,1);
-    % if t > 2.5 && t < 2.55
-    %     tau_dist(3) = 5;
-    % end
-    tau = M * ddqd + C + G + F + tau_dist ;
+    tau = M * ddqd + C + G + F ;
+elseif F==6
+    % ---------- 误差 ----------
+    e  = qr - qd;
+    de = dqr - dqd;
+
+    % ---------- 控制增益 ----------
+    Kp = diag(100*ones(size(qr)));
+    Kd = diag(20*ones(size(qr)));
+
+    % ---------- 动力学计算 ----------
+    LP = init_LP_1028_mex;
+    SV = init_SV_1027_mex;
+    [M, C, G] = calculate_dynamics(qr, dqr, LP, SV);
+    F = calculate_joint_friction_mex(dqr);
+
+    % ---------- 调用 RBF 自适应控制 MEX ----------
+    [tau, hat_fx] = rbf_adaptive_mex(qr, dqr, e, de, M, C, G, F, Kp, Kd);
 
 end
 
