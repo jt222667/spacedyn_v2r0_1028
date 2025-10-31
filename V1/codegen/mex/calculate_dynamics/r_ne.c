@@ -194,8 +194,8 @@ void r_ne(const emlrtStack *sp, const real_T SV_A0[9], const real_T SV_AA[189],
   /*         R_NE 返回一个广义力，包含 */
   /*         连杆0上的反作用力FF0、TT0，以及 */
   /*         各关节的转矩τ。 */
-  /*  初始化 Ez */
   /*  初始化 Gravity */
+  /*  初始化 Ez */
   /*  Calculation of coordinate transfromation matrices */
   /*  Calculation of velocity vectors vv,ww */
   /*  NOTE:	vv,ww are in the Inertial frame */

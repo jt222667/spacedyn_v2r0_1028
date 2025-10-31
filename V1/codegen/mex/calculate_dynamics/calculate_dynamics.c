@@ -94,7 +94,7 @@ static emlrtRSInfo j_emlrtRSI = {
 static emlrtBCInfo emlrtBCI = {
     1,              /* iFirst */
     7,              /* iLast */
-    36,             /* lineNo */
+    26,             /* lineNo */
     20,             /* colNo */
     "In2",          /* aName */
     "init_LP_1028", /* fName */
@@ -140,7 +140,6 @@ void calculate_dynamics(const emlrtStack *sp, const real_T q[21],
   /*  且其对稳定性的衡量不受整体尺度放缩影响，因噪声影响程度由变化率而非绝对大小决定
    */
   /*  计算方式：cond(A) = 最大奇异值 / 最小奇异值 */
-  /*  In2 = 100 * In2; */
   for (k = 0; k < 21; k++) {
     if (k == 0) {
       i = 0;

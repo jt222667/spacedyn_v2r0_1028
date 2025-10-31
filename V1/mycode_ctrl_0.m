@@ -51,16 +51,15 @@ for i = 1:nq
     [qd(i), dqd(i), ddqd(i)] = quintic_trajectory_mex(t, T, q0(i), qf(i));
 end
 
-F = 1                   ...
-;
+F = 1
 
-if F==1 %%%%%% OG %%%%%%
+if F==1         %%%%%%%%%%%% OG %%%%%%%%%%%%
     % ---------- 动力学计算 ----------
     [M, C, G, F] = calculate_dynamics_mex(qr, dqr);
     % ---------- 控制律 ----------
-    tau = M * ddqd + C + G + F ;
-
-elseif F==2 %%%%%% SMC %%%%%%
+    tau = M * ddqd + C + G  ;
+    disp(tau)
+elseif F==2     %%%%%%%%%%%% SMC %%%%%%%%%%%%
     % ---------- 误差 ----------
     e = qd - qr;
     de = dqd - dqr;
@@ -73,10 +72,16 @@ elseif F==2 %%%%%% SMC %%%%%%
     tau_dist = zeros(21,1);
     % ---------- 动力学计算 ----------
     [M, C, G, F] = calculate_dynamics_mex(qr, dqr);
+    disp('F')
+    disp(F)
+
     % ---------- 控制律 ----------
     tau = M*(ddqd + P*de) + C + G - M * S_dot + tau_dist + F ;
+        disp('tau-F')
 
-elseif F==3 %%%%%% SMC 指数趋近律 %%%%%%
+    disp(tau-F)
+
+elseif F==3     %%%%%%%%%%%% SMC 指数 %%%%%%%%%%%%
     % ---------- 误差 ----------
     e  = qd - qr;
     de = dqd - dqr;
@@ -94,7 +99,7 @@ elseif F==3 %%%%%% SMC 指数趋近律 %%%%%%
     % ---------- 控制律 ----------
     tau = M*(ddqd + P*de) + C + G - M * S_dot + F ;
 
-elseif F==4 %%%%%% NFTSMC %%%%%%
+elseif F==4     %%%%%%%%%%%% NFTSMC %%%%%%%%%%%%
     % ---------- 误差 ----------
     e  = qr - qd;
     de = dqr - dqd;
@@ -115,7 +120,7 @@ elseif F==4 %%%%%% NFTSMC %%%%%%
     % ---------- 控制律 ----------
     tau = M * ( B \ (ds - A) + ddqd ) + C + G + F  ;
 
-elseif F==5 %%%%%% PD %%%%%%
+elseif F==5     %%%%%%%%%%%% PD %%%%%%%%%%%%
     % ---------- 误差 ----------
     e  = qr - qd;
     de = dqr - dqd;
@@ -128,7 +133,7 @@ elseif F==5 %%%%%% PD %%%%%%
     % ---------- 控制律 ----------
     tau = M * ddqd + C + G + F ;
 
-elseif F==6 %%%%%% PD RBF %%%%%%
+elseif F==6     %%%%%% PD RBF %%%%%%
     % ---------- 误差 ----------
     e  = qr - qd;
     de = dqr - dqd;

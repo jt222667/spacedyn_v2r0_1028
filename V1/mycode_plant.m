@@ -36,6 +36,6 @@ dqr  = u(43:63);
 
 % F = 1.1 * F;
 
-qdd = M \ (tau - C - G  - F );
+qdd = M \ (tau - C - G  );
 
 sys(:) = qdd;

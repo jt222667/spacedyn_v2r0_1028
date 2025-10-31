@@ -22,8 +22,8 @@
 
 function Force = r_ne( LP,SV )
 
-Ez = [0; 0; 1];       % 初始化 Ez
 Gravity = [0; 0; 0];  % 初始化 Gravity
+Ez = [0; 0; 1];       % 初始化 Ez
 
 % Calculation of coordinate transfromation matrices
 A_I_0 = SV.A0;
