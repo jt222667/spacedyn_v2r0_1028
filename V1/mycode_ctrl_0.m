@@ -57,8 +57,8 @@ if F==1         %%%%%%%%%%%% OG %%%%%%%%%%%%
     % ---------- 动力学计算 ----------
     [M, C, G, F] = calculate_dynamics_mex(qr, dqr);
     % ---------- 控制律 ----------
-    tau = M * ddqd + C + G  ;
-    disp(tau)
+    tau = M * ddqd + C + G + F;
+
 elseif F==2     %%%%%%%%%%%% SMC %%%%%%%%%%%%
     % ---------- 误差 ----------
     e = qd - qr;
@@ -72,14 +72,8 @@ elseif F==2     %%%%%%%%%%%% SMC %%%%%%%%%%%%
     tau_dist = zeros(21,1);
     % ---------- 动力学计算 ----------
     [M, C, G, F] = calculate_dynamics_mex(qr, dqr);
-    disp('F')
-    disp(F)
-
     % ---------- 控制律 ----------
     tau = M*(ddqd + P*de) + C + G - M * S_dot + tau_dist + F ;
-        disp('tau-F')
-
-    disp(tau-F)
 
 elseif F==3     %%%%%%%%%%%% SMC 指数 %%%%%%%%%%%%
     % ---------- 误差 ----------
@@ -125,8 +119,8 @@ elseif F==5     %%%%%%%%%%%% PD %%%%%%%%%%%%
     e  = qr - qd;
     de = dqr - dqd;
     % ---------- 参数 ----------
-    Kp = diag(100*ones(size(qr)));
-    Kd = diag(20*ones(size(qr)));
+    Kp = diag(1000*ones(size(qr)));
+    Kd = diag(200*ones(size(qr)));
     ddqd = -Kp * e - Kd * de;
     % ---------- 动力学计算 ----------
     [M, C, G, F] = calculate_dynamics_mex(qr, dqr);

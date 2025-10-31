@@ -1,5 +1,6 @@
 function [M, C, G, F] = calculate_dynamics(q, dq) %#codegen
 
+% ---------- 初始化 ----------
 LP = init_LP_1028();
 SV = init_SV_1027();
 

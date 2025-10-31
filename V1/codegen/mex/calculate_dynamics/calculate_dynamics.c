@@ -22,70 +22,70 @@
 
 /* Variable Definitions */
 static emlrtRSInfo emlrtRSI = {
-    3,                    /* lineNo */
+    4,                    /* lineNo */
     "calculate_dynamics", /* fcnName */
     "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_"
     "1028\\V1\\calculate_dynamics.m" /* pathName */
 };
 
 static emlrtRSInfo b_emlrtRSI = {
-    10,                   /* lineNo */
-    "calculate_dynamics", /* fcnName */
-    "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_"
-    "1028\\V1\\calculate_dynamics.m" /* pathName */
-};
-
-static emlrtRSInfo c_emlrtRSI = {
     11,                   /* lineNo */
     "calculate_dynamics", /* fcnName */
     "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_"
     "1028\\V1\\calculate_dynamics.m" /* pathName */
 };
 
-static emlrtRSInfo d_emlrtRSI = {
+static emlrtRSInfo c_emlrtRSI = {
     12,                   /* lineNo */
     "calculate_dynamics", /* fcnName */
     "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_"
     "1028\\V1\\calculate_dynamics.m" /* pathName */
 };
 
-static emlrtRSInfo e_emlrtRSI = {
-    23,                   /* lineNo */
+static emlrtRSInfo d_emlrtRSI = {
+    13,                   /* lineNo */
     "calculate_dynamics", /* fcnName */
     "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_"
     "1028\\V1\\calculate_dynamics.m" /* pathName */
 };
 
-static emlrtRSInfo f_emlrtRSI = {
+static emlrtRSInfo e_emlrtRSI = {
     24,                   /* lineNo */
     "calculate_dynamics", /* fcnName */
     "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_"
     "1028\\V1\\calculate_dynamics.m" /* pathName */
 };
 
-static emlrtRSInfo g_emlrtRSI = {
+static emlrtRSInfo f_emlrtRSI = {
     25,                   /* lineNo */
     "calculate_dynamics", /* fcnName */
     "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_"
     "1028\\V1\\calculate_dynamics.m" /* pathName */
 };
 
-static emlrtRSInfo h_emlrtRSI = {
-    34,                   /* lineNo */
+static emlrtRSInfo g_emlrtRSI = {
+    26,                   /* lineNo */
     "calculate_dynamics", /* fcnName */
     "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_"
     "1028\\V1\\calculate_dynamics.m" /* pathName */
 };
 
-static emlrtRSInfo i_emlrtRSI = {
+static emlrtRSInfo h_emlrtRSI = {
     35,                   /* lineNo */
     "calculate_dynamics", /* fcnName */
     "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_"
     "1028\\V1\\calculate_dynamics.m" /* pathName */
 };
 
-static emlrtRSInfo j_emlrtRSI = {
+static emlrtRSInfo i_emlrtRSI = {
     36,                   /* lineNo */
+    "calculate_dynamics", /* fcnName */
+    "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_"
+    "1028\\V1\\calculate_dynamics.m" /* pathName */
+};
+
+static emlrtRSInfo j_emlrtRSI = {
+    37,                   /* lineNo */
     "calculate_dynamics", /* fcnName */
     "C:\\Users\\J\\Desktop\\SpaceDyn-2.0\\src\\matlab\\spacedyn_v2r0_"
     "1028\\V1\\calculate_dynamics.m" /* pathName */
@@ -132,6 +132,7 @@ void calculate_dynamics(const emlrtStack *sp, const real_T q[21],
   int32_T k;
   st.prev = sp;
   st.tls = sp->tls;
+  /*  ---------- 初始化 ---------- */
   st.site = &emlrtRSI;
   /*  */
   /*  矩阵的条件数唯一决定线性方程解受观测值噪声的影响程度 */
