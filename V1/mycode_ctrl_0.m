@@ -51,7 +51,7 @@ for i = 1:nq
     [qd(i), dqd(i), ddqd(i)] = quintic_trajectory_mex(t, T, q0(i), qf(i));
 end
 
-F = 5                    ...
+F = 1                   ...
 ;
 
 if F==1 %%%%%% OG %%%%%%

@@ -70,7 +70,7 @@ fb = friction_params(:, 4);  % 偏置摩擦系数
 F = zeros(21, 1);
 
 for i = 1:21
-    F(i) = fc(i) * sign(qr(i)) + fv(i) * qr(i) + fb(i);
+    F(i) = fc(i) * sign(q(i)) + fv(i) * q(i) + fb(i);
 end
 
 end

@@ -30,9 +30,9 @@ dqr  = u(43:63);
 
 [M, C, G, F] = calculate_dynamics_mex(qr, dqr);
 
-M = 1.3 * M;
-C = 1.3 * C;
-G = 1.3 * G;
+% M = 1.3 * M;
+% C = 1.3 * C;
+% G = 1.3 * G;
 
 % F = 1.1 * F;
 

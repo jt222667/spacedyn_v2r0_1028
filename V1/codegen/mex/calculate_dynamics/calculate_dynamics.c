@@ -265,7 +265,9 @@ void calculate_dynamics(const emlrtStack *sp, const real_T q[21],
   /*  粘滞摩擦系数 */
   /*  偏置摩擦系数 */
   for (i = 0; i < 21; i++) {
-    F[i] = (fc[i] + fv[i] * ((real_T)i + 1.0)) + fb[i];
+    real_T d;
+    d = q[i];
+    F[i] = (fc[i] * muDoubleScalarSign(d) + fv[i] * d) + fb[i];
     if (*emlrtBreakCheckR2012bFlagVar != 0) {
       emlrtBreakCheckR2012b((emlrtConstCTX)sp);
     }
